@@ -1,7 +1,10 @@
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 0px;
-    margin-left: 0px;
+    /* margin-top: 0px;
+    margin-left: 0px; */
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 body{
@@ -23,26 +26,106 @@ p{
    margin-top: 100px; 
 }
 
-.details{
-    margin-left: 250px;
+#photos{
+    margin-left: 20px;
+}
+
+.main{
+    margin-left: 110px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        text-align: center; /* Ensure text is centered on smaller screens */
+        margin-right: 80px;
+        margin-bottom: 30px;
+        margin-top: -50px;
+    }
+}
+
+.mains{
+    margin-left: 65px;
+}
+
+@media (max-width: 768px) {
+    .mains {
+        text-align: center; /* Ensure text is centered on smaller screens */
+        margin-right: 30px;
+        margin-bottom: 30px;
+        margin-top: -50px;
+    }
 }
 
 .center{
     text-align: center;
 }
 
-button{
+/* button{
     margin-left: 250px;
-}
+} */
 
-#button{
+/* #button{
     text-decoration: none;
     color: brown;
+} */
+
+/* Basic button styling */
+button.cv-button {
+    display: inline-block; 
+    padding: 12px 30px; 
+    background-color: #66a296; /* Green background */
+    border: none; 
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
 }
 
+/* Anchor inside the button */
+button.cv-button a {
+    text-decoration: none; 
+    color: white; /* White text */
+    font-size: 16px; 
+    font-weight: bold;
+}
+
+/* Hover effect for button */
+button.cv-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slightly raise the button */
+}
+
+/* Hover effect for link */
+button.cv-button:hover a {
+    color: #e1f5e1; /* Lighter color for text when hovering */
+}
+
+/* Focused state (optional for accessibility) */
+button.cv-button:focus {
+    outline: none; 
+    box-shadow: 0 0 0 4px rgba(72, 166, 75, 0.5); /* Adds focus outline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    button.cv-button {
+        padding: 10px 25px; 
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    button.cv-button {
+        padding: 8px 20px; 
+        font-size: 12px;
+    }
+}
+
+
 #photo{
-    margin-top: 5%;
-    margin-left: 200px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+    width: 60%;
 }
 
 #me{
@@ -61,6 +144,7 @@ button{
 
 .info-box{
     margin-bottom: 20px;
+    /* margin-left: 10px; */
 }
 
 #info{
@@ -71,21 +155,23 @@ a{
     color: rgb(52, 102, 128);
 }
 
+/* skill section */
+
 #skill{
     margin: 8% 8% 0% 8%;
 }
 
-.skill-container{
+/* .skill-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 2rem;  /* 1 rem=60px */
+    gap: 2rem; 
     margin-top: 20px;
     
-}
+} */
 
-.skill-img img{
+/* #skill-img img{
     width: 90%; 
-}
+} */
 
 .bar-container{
     display: flex;
@@ -135,6 +221,8 @@ a{
     align-items: center; 
     justify-content: center; 
     margin-top: 3%;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .icon{
@@ -145,6 +233,7 @@ a{
     align-items: center;
     justify-content: center;
     margin: 0px 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .icon i{
@@ -163,6 +252,7 @@ a{
 
 footer{
     margin: 50px 0px;
+    padding: 0 20px;
 }
 
 footer p{
@@ -172,7 +262,47 @@ footer p{
 }
 
 
-@media(max-width:600px){
+@media (max-width: 768px) {
+    .icon-set {
+        gap: 5px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon i {
+        font-size: 24px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-set {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icon i {
+        font-size: 22px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+
+/* @media(max-width:600px){
     .navbar{
         margin-left: -20px;
     }
@@ -180,4 +310,5 @@ footer p{
     .homemain{
         margin-right: 100px;
     }
-}
+} */
+
